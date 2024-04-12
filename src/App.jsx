@@ -7,7 +7,8 @@ import SearchForm from './components/SearchBox/SearchBox';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import contacts from './contacts.json'
-
+import * as Yup from "yup";
+import { Formik, Form, Field  } from 'formik';
 
 const App = () => {
 
