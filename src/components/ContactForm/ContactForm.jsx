@@ -36,7 +36,7 @@ const ContactForm = ({ addContact }) => {
       onSubmit={handleSubmit}
       validationSchema={FeedbackSchema}
     >
-      <Form>
+      <Form className={css.form}>
         <div>
           <label htmlFor={nameFieldId}>Name</label>
           <Field
