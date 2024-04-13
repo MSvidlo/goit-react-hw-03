@@ -1,14 +1,14 @@
 import Contact from "../Contact/Contact";
 import React from "react";
+import css from './ContactList.module.css';
 
-const ContactList = ({ filterContacts }) => { 
+const ContactList = ({ contacts, onDelete }) => { 
     return (
-        <ul>
-            {filterContacts.map((contact) => (
+        <ul className={css.contactsList}>
+            {contacts.map((contact) => (
                 <li key={contact.id}>
-                    <Contact
-                        name={contact.name}
-                        number={contact.number}
+                    <Contact onDelete={onDelete} 
+                        contactData={contact}
                     />
 
                 </li>
